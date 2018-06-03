@@ -14,33 +14,233 @@ $app-direction: ltr;
 
 @import "ionic.globals";
 
-
-// Shared Variables
-// --------------------------------------------------
-// To customize the look and feel of this app, you can override
-// the Sass variables found in Ionic's source scss files.
-// To view all the possible Ionic variables, see:
-// http://ionicframework.com/docs/theming/overriding-ionic-variables/
-
-
-
-
-// Named Color Variables
-// --------------------------------------------------
-// Named colors makes it easy to reuse colors on various components.
-// It's highly recommended to change the default colors
-// to match your app's branding. Ionic uses a Sass map of
-// colors so you can add, rename and remove colors as needed.
-// The "primary" color is the only required color in the map.
-
 $colors: (
-  primary:    #488aff,
-  secondary:  #32db64,
-  danger:     #f53d3d,
-  light:      #f4f4f4,
-  dark:       #222
+  facebook: #1d4fb7 ,
+  background: #d6d6d6 ,
+  backgroundHeaderCard: #f3f3f3,
+  tab: #f8f8f8,
+  orange: #f1552c,
+  blues: #7EC0EE,
+  danger: #872db9,
+  red: #d50000,
+  success:#00c853,
+  dark: black,
+  leaf : #1e932d,
+  alpha: #7EC0EE,
+  gold: #ffd700 ,
+  sun: #FDB813,
+  rain: #6d6d6d,
+  light: white,
+  water: #0f5e9c,
+  primary: #7EC0EE,
+  font-primary:#2c343d,
+  third:#2c343d,
+  white: white,
+  skin: #E6AC6A,
+  secondary: #f6a821
 );
 
+.floating-panel {
+  position: absolute;
+  right: 5px;
+  z-index: 999999;
+  background-color: transparent;
+  padding: 5px;
+  text-align: center;
+  font-family: 'Roboto','sans-serif';
+  line-height: 30px;
+  width : 97%;
+}
+
+.modal-back-button{
+	.back-button{
+		display: block!important
+	}
+}
+
+ion-header {
+  ion-icon.back-button-icon.icon {
+      color: map-get($colors, white);
+  }
+  ion-icon {
+    color: map-get($colors, white);
+  }
+  .toolbar-title.toolbar-title { color: map-get($colors, dark) }
+  .toolbar {
+      .button{
+          color: map-get($colors, gold);            
+      }
+      .toolbar-background {
+        background-color: map-get($colors, primary);
+      }
+      .toolbar-title {
+        text-align: center;
+        color: map-get($colors, white);
+      }
+  }
+}
+.centeralizad {
+  text-align: center;
+}
+.text-light {color: white;}
+.-text-gold {color: map-get($colors, gold);}
+.space {margin-bottom:5px;margin-top:5px;}
+
+.-black {
+  background-color: #333;
+  color: white;
+}
+.-yellow {
+  background-color: #fdba00;
+  color: black;
+}
+.-alpha {
+  background-color: map-get($colors, alpha);
+  color: map-get($colors, white);
+}
+.-theme {
+  background-color: map-get($colors, alpha);
+  
+  color: #fff;
+   .button{
+    margin-top: 7%;
+   }
+}
+.card-header {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: map-get($colors, white);
+}
+.scroll-bg{
+  background-color: #2c2847;
+  background-size: cover;
+  color: map-get($colors, gold);
+}
+
+ion-content{
+  overflow:hidden; 
+  background-color: map-get($colors, light);
+  color: map-get($colors, gold);
+  .content {
+    color: map-get($colors, gold);
+    overflow:hidden; 
+    background-color: map-get($colors, light);
+  }
+  .spaceMedium {
+    //margin-top: 3%;
+    overflow:hidden; 
+  }
+  .spaceTop {
+    margin-top: 5%;
+    overflow:hidden; 
+  }
+  .spaceHigh {
+    margin-top: 15%;
+  }
+  .spaceSuper {
+    margin-top: 25%;
+  }
+  .SPACE {
+    margin-top: 25%;
+    margin-bottom: 25%;
+  }
+  .button {
+    margin-top: 7%;
+    border-radius: 5px ;    
+    padding-top: 7%; 
+    padding-bottom: 7%; 
+    font-weight: bold;         
+  }
+
+.tabbar  {
+  background-color: transparent;
+  border: none;
+}
+.tab-button {
+    color: #fff;
+    opacity: .5 ;
+}
+  .tab-button[aria-selected=true] {
+    color: #fff; 
+    opacity: 1 ;
+}
+
+  .item{
+    border-radius: 5px ;  
+    margin-bottom: 1%;   
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.-extra {
+  background-color: #3f5060;
+  color: white;
+}
+
+.-text-white {
+  color: white;
+}
+.-toast-error {
+  > div{
+       background-color:red!important;
+       color: white;
+   }
+}
+.-toast-success {
+  > div{
+       background-color:#1871AD!important;
+       color: white;
+   }
+}
+.scroll{
+  overflow-y: auto !important;
+}
+
+.full-screen{
+  width:100%;
+  right:0px; 
+  top:0px; 
+  height:100px;
+  background-color: map-get($colors, blues);
+  text-align: center;
+  color: map-get($colors, backgroundHeaderCard);
+  span {
+    display: block;
+    position: relative;
+    top: 40%;
+    transform: translateY(-25%);
+    font-size: 3em;
+  }
+  p {
+    font-size: 1em;
+  }
+}
+.Locked{
+  opacity: .4;
+  
+}
+h4{
+  color:black;
+}
+ion-scroll[scrollX] {
+  white-space: nowrap;
+  height:150px;
+  overflow:hidden;    
+  border-bottom: none;
+  .scroll-item {
+    width: 60%;
+    display: inline-block;
+    .card-content{
+      color: map-get($colors, light);
+      min-height: 8em;
+      height: 8em;
+    }
+  }
+}
+.linkText{
+  color: white;
+  padding-top: 10%;
+}
 
 // App iOS Variables
 // --------------------------------------------------
