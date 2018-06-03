@@ -1,0 +1,49 @@
+<ion-content>
+    <div class="floating-panel" *ngIf="search == true">
+        <ion-item>        
+            <ion-input type="text" placeholder="Destino" [(ngModel)]="end" id="end"></ion-input>
+            <ion-label  item-end> <ion-icon name="ios-search" item-end></ion-icon></ion-label>
+        </ion-item>
+    </div> 
+    <div #map id="map" [style.height.%]='MapHeight'></div>
+    <div id="right-panel" *ngIf="EndMap == true" style="height:200px;"></div>
+    <ion-slides pager [style.height.%]='40' style="background-color: white;color:black" *ngIf="search == false">
+      <ion-slide style="background-color: white">
+        <h2>15:20</h2>
+        <img src="assets/imgs/way/normal.jpg">
+        <button ion-button style="background-color: #4285f4;color:white;" icon-right class="-text-white" (click)="run()">
+          Rápido                    
+        </button>
+      </ion-slide>
+        <ion-slide style="background-color: white">
+          <h2>15:25</h2>
+          <img src="assets/imgs/way/low.png">
+          <button ion-button style="background-color: #4285f4;color:white;" icon-right class="-text-white" (click)="run()">
+            Plano                    
+          </button>
+        </ion-slide>
+        <ion-slide style="background-color: white">
+            <h2>15:35</h2>
+          <img src="assets/imgs/way/high.jpg">
+          <button ion-button style="background-color: #4285f4;color:white;" icon-right class="-text-white" (click)="run()">
+            Seguro                    
+          </button>
+        </ion-slide>
+      </ion-slides>
+    <ion-fab middle right *ngIf="HelpMap == true">
+            <button ion-fab fab-fixed (click)="help()" color="red">
+              <!-- <ion-icon name="ios-call"></ion-icon> -->
+              SOS
+            </button>
+    </ion-fab>
+    <ion-fab bottom center *ngIf="search == true && EndMap == false">
+        <button ion-fab fab-fixed (click)="calculateAndDisplayRoute()">
+          <ion-icon name="ios-bicycle"></ion-icon>
+        </button>
+      </ion-fab>
+    <ion-fab middle left *ngIf="EndMap == true">
+        <button ion-fab fab-fixed (click)="preFinish()" color="success">
+          <ion-icon name="ios-close"></ion-icon>
+        </button>
+      </ion-fab>
+</ion-content>

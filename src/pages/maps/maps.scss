@@ -1,0 +1,21 @@
+page-maps {
+  h4{
+    color:black;
+  }
+  .-primary {
+    color :  white;
+    background: map-get($colors, green);
+    //border: 2px solid map-get($colors, green);
+  }
+  .input{
+    margin-top: 5px;
+    background: #fff;
+  }
+  .bar-buttons{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+
