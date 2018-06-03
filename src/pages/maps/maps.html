@@ -7,7 +7,7 @@
     </div> 
     <div #map id="map" [style.height.%]='MapHeight'></div>
     <div id="right-panel" *ngIf="EndMap == true" style="height:200px;"></div>
-    <ion-slides pager [style.height.%]='40' style="background-color: white;color:black" *ngIf="search == false">
+    <ion-slides pager [style.height.%]='40' style="background-color: white;color:black" *ngIf="search == false && HelpMap == false">
       <ion-slide style="background-color: white">
         <h2>15:20</h2>
         <img src="assets/imgs/way/normal.jpg">
