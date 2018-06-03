@@ -1,0 +1,41 @@
+
+        <ion-content class="main-view">
+                        <div class="overlay"></div>
+
+        <ion-slides #slider onlyExternal="true" pager="false">
+                <ion-slide class="-alpha"  class="modal_content">
+                <div padding>
+                <i  *ngIf="finish==false" class="fa fa-clock-o"></i>
+                <i  *ngIf="finish==true" class="fa fa-trophy" style="color:#ffd700;"></i>
+                <br><br>
+                <span id="chronotime">00:00:00</span>
+                <br><br>
+                <ion-list>
+                <ion-item>
+                        Distância 
+                        <ion-badge item-end>{{DataParams.distance}}</ion-badge>
+                </ion-item>
+                <ion-item>
+                        Tempo 
+                        <ion-badge item-end>{{DataParams.time}}</ion-badge>
+                </ion-item>
+                </ion-list>
+                <rating max="5" (ngModelChange)="thanks()" item-end *ngIf="finish==true"></rating>
+                <button color="light" ion-button block icon-left (click)="submit()" *ngIf="finish==false">
+                <ion-icon name="ios-stopwatch" start></ion-icon>
+                Finalizar
+                </button>
+                <button color="third" class="-text-white" *ngIf="finish==true" ion-button block icon-left (click)="presentActionSheet()">
+                <ion-icon name="md-share" start></ion-icon>
+                Compartilhar
+                </button>
+                </div>
+                <ion-footer no-border padding>
+                <button ion-button block color="third" *ngIf="finish==true" full icon-left class="-text-white" (click)="modalhide()">
+                <!-- <ion-icon name="ios-close" start></ion-icon> -->
+                Fechar                     
+                </button>
+                </ion-footer>
+                </ion-slide>
+        </ion-slides>
+        </ion-content>

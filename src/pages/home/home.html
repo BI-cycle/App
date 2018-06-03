@@ -1,35 +1,48 @@
 <ion-content>
-        <div class="Header">
-           78 KMs
-        </div>
-        <ion-row class="icons-basic-page">
-           <ion-list-header>
-              Conquistas
-              <p item-end style="color:#0f5e9c;font-weight: bold;" (click)="more()">VER MAIS</p>
-           </ion-list-header>
-           <ion-col  *ngFor="let item of List.trophies" (click)="show(item)"> 
-           <ion-icon name="{{item.icon}}" color="{{item.color}}"></ion-icon>
-           </ion-col> 
-        </ion-row>
-        <ion-row class="icons-basic-page">
-           <ion-list-header>
-              Ranking
-           </ion-list-header>
-           <ion-col>
-              <h1>{{List.ranking.neighborhood}}</h1>
-              <p style="color:#000;">Bairro</p>
-           </ion-col>
-           <ion-col >
-              <h1>{{List.ranking.city}}</h1>
-              <p style="color:#000;">Cidade</p>
-           </ion-col>
-           <ion-col >
-              <h1>{{List.ranking.state}}</h1>
-              <p style="color:#000;">Estado</p>
-           </ion-col>
-           <ion-col >
-              <h1>{{List.ranking.country}}</h1>
-              <p style="color:#000;">País</p>
-           </ion-col>
-        </ion-row>
-     </ion-content>
+                <div class="Header">
+                  78 KMs
+                </div>
+                <ion-list>
+                  <ion-list-header>
+                    Perfil
+                    <!-- <p item-end style="color:#0f5e9c;font-weight: bold;" (click)="more()">VER MAIS</p> -->
+                  </ion-list-header>
+                  <ion-item>
+                    <ion-avatar item-start>
+                      <img src="assets/imgs/user.jpg">
+                    </ion-avatar>
+                    <h2 style="font-weight: bold;color:#666666">Carla Garcia</h2>
+                    <!-- <p item-end item-end style="color:#0f5e9c;font-weight: bold;">Ver Perfil</p> -->
+                  </ion-item>
+                </ion-list>
+                <ion-row class="icons-basic-page">
+                  <ion-list-header>
+                    Conquistas
+                    <p item-end style="color:#0f5e9c;font-weight: bold;" (click)="more()">VER MAIS</p>
+                  </ion-list-header>
+                  <ion-col *ngFor="let item of List.trophies" (click)="show(item)"> 
+                  <ion-icon name="{{item.icon}}" color="{{item.color}}"></ion-icon>
+                  </ion-col> 
+                </ion-row>
+                <ion-row class="icons-basic-page">
+                  <ion-list-header>
+                    Ranking
+                  </ion-list-header>
+                  <ion-col>
+                    <h1>{{List.ranking.neighborhood}}</h1>
+                    <p style="color:#000;">Bairro</p>
+                  </ion-col>
+                  <ion-col >
+                    <h1>{{List.ranking.city}}</h1>
+                    <p style="color:#000;">Cidade</p>
+                  </ion-col>
+                  <ion-col >
+                    <h1>{{List.ranking.state}}</h1>
+                    <p style="color:#000;">Estado</p>
+                  </ion-col>
+                  <ion-col >
+                    <h1>{{List.ranking.country}}</h1>
+                    <p style="color:#000;">País</p>
+                  </ion-col>
+                </ion-row>
+              </ion-content>

@@ -20,25 +20,38 @@ $colors: (
   backgroundHeaderCard: #f3f3f3,
   tab: #f8f8f8,
   orange: #f1552c,
-  blues: #7EC0EE,
+  blues: #4285f4,
   danger: #872db9,
   red: #d50000,
   success:#00c853,
   dark: black,
   leaf : #1e932d,
-  alpha: #7EC0EE,
+  alpha: #4285f4,
   gold: #ffd700 ,
   sun: #FDB813,
   rain: #6d6d6d,
   light: white,
   water: #0f5e9c,
-  primary: #7EC0EE,
+  primary: #4285f4,
   font-primary:#2c343d,
   third:#2c343d,
   white: white,
   skin: #E6AC6A,
   secondary: #f6a821
 );
+
+ul {
+  padding: 0px;
+ 
+  &.rating li {
+    padding: 5px 10px !important;
+    background: none;
+    color: map-get($colors, gold);
+    ion-icon {
+      font-size: 30px;
+    }
+  }
+}
 
 .floating-panel {
   position: absolute;
